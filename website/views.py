@@ -20,4 +20,4 @@ def blog(request):
         'posts': list_posts
     }
 
-    return render(request, 'index.html', data)
+    return render(request, 'index.html')
