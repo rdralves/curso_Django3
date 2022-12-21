@@ -18,7 +18,8 @@
 			<a href="#" class="image avatar"><img src="{% static 'images/avatar.jpg' %}" alt="" /></a>
 			<h1><strong>Django 3</strong>, is super Framework<br />
 				responsive site template freebie<br />
-				crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1>
+				Rodrigo <a href="#"></a>
+			</h1>
 		</div>
 	</header>
 
@@ -31,9 +32,7 @@
 				<h2>Framework Django</h2>
 			</header>
 			<p>Django e Python</p>
-			<ul class="actions">
-				<li><a href="#" class="button">Django 3</a></li>
-			</ul>
+			
 		</section>
 
 		<!-- Two -->
@@ -45,9 +44,13 @@
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="{% static 'images/fulls/01.jpg' %}" class="image fit thumb"><img
 							src="{% static 'images/thumbs/01.jpg' %}" alt="" /></a>
-					<h3>ola</h3>
+					<!-- <h3>ola</h3> -->
 					<h3>{{ item.title }}</h3>
 					<p>{{item.content}}</p>
+					<span>{{item.get_category_label}}</span>
+					<ul class="actions">
+						<li><a href="{% url 'post_datail' item.id %}" class="button">Read More</a></li>
+					</ul>
 				</article>
 				{% endfor %}
 			</div>

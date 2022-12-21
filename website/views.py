@@ -11,7 +11,7 @@ from .models import Post
 #     return render(request, 'index.html')
 
 
-def lis(request):
+def home(request):
     lista = app.lista
     posts = Post.objects.all()
     data = {
@@ -19,3 +19,8 @@ def lis(request):
         'lis': lista
     }
     return render(request, 'index.html', data)
+
+
+def post_datail(request, id):
+    post= Post.objects.get(id=id)
+    return render(request, 'post_datail.html', {'post': post})
