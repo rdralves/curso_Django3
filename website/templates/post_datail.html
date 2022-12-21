@@ -18,15 +18,17 @@
                     <h3>Home</h3>
                 </a></li>
         </ul>
-        <h3>Meus Posts</h3>
-        {{ post}}
-        {{post.content}}
+        <h3>Meus Posts</h3><br>
+        {{ post}}<br>
+        {{post.content }}
+        <br>
+        <img src="{{post.imagem.url }}" alt=""><br>
     
-        <ul class="actions">
+        <!-- <ul class="actions">
             <li><a href="{% url 'home' %}" class="button">
                     <h3>Home</h3>
                 </a></li>
-        </ul>
+        </ul> -->
     </div>
 </body>
 
